@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72E591D6-8F83-4D8C-8F67-9C325E623234}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wpf.BusyIndicatorEasy</RootNamespace>
+    <AssemblyName>Wpf.BusyIndicatorEasy</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="BusyIndicator\Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Primitives\Themes\Generic\SelectorItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Primitives\Themes\Generic\WindowControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\classic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic\Common.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic\Glyphs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\luna.homestead.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\luna.metallic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\luna.normalcolor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\royale.normalcolor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyVersionInfo.cs" />
+    <Compile Include="AssemblyVersionInfoCommon.cs" />
+    <Compile Include="BusyIndicator\Implementation\BusyIndicator.cs" />
+    <Compile Include="BusyIndicator\Implementation\Converters\ProgressBarWidthConverter.cs" />
+    <Compile Include="Core\CancelRoutedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Converters\CenterTitleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Converters\ColorBlendConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Converters\WindowContentBorderMarginConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Converters\WindowControlBackgroundConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ErrorMessages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\IndexChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\IndexChangedEventHandler.cs" />
+    <Compile Include="Core\Input\InputValidationErrorEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Input\IValidateInput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Input\KeyModifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Input\KeyModifierCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Input\KeyModifierCollectionConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Media\Animation\AnimationRate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Media\Animation\AnimationRateConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Media\Animation\IterativeAnimationEquation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Media\Animation\IterativeAnimationEquationDelegate.cs" />
+    <Compile Include="Core\Media\Animation\IterativeEquationConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Media\Animation\PennerEquation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Media\Animation\PennerEquations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Media\WindowColors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\PropertyChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\PropertyChangedEventHandler.cs" />
+    <Compile Include="Core\Utilities\DoubleHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Utilities\PointHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Utilities\RectHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Utilities\ReflectionHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Utilities\Segment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Utilities\ValueChangeHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Utilities\WeakEventListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\VersionResourceDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Primitives\HsvColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Primitives\Selector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Primitives\SelectorItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Primitives\Themes\ResourceKeys.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Primitives\WindowControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusyIndicator\Implementation\VisualStates.BusyIndicator.cs" />
+    <Compile Include="VisualStates.cs" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Primitives\" />
+    <Folder Include="Themes\Generic\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Core\ErrorMessages.resx">
+      <DependentUpon>ErrorMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
