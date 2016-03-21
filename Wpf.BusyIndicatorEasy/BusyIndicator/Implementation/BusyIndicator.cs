@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace Wpf.BusyIndicatorEasy
 {
-    /// <summary>
-    ///     A control to provide a visual indicator when an application is busy.
-    /// </summary>
     [TemplateVisualState(Name = VisualStates.StateIdle, GroupName = VisualStates.GroupBusyStatus)]
     [TemplateVisualState(Name = VisualStates.StateBusy, GroupName = VisualStates.GroupBusyStatus)]
     [TemplateVisualState(Name = VisualStates.StateVisible, GroupName = VisualStates.GroupVisibility)]

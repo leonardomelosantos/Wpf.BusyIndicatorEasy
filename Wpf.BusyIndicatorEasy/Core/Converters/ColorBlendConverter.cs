@@ -1,35 +1,13 @@
-﻿/*************************************************************************************
-
-   Extended WPF Toolkit
-
-   Copyright (C) 2007-2013 Xceed Software Inc.
-
-   This program is provided to you under the terms of the Microsoft Public
-   License (Ms-PL) as published at http://wpftoolkit.codeplex.com/license 
-
-   For more features, controls, and fast professional support,
-   pick up the Plus Edition at http://xceed.com/wpf_toolkit
-
-   Stay informed: follow @datagrid on Twitter or Like http://facebook.com/datagrids
-
-  ***********************************************************************************/
-
-using System;
+﻿using System;
 using System.Windows.Data;
 using System.Windows.Media;
 
 namespace Wpf.BusyIndicatorEasy.Core.Converters
 {
-    /// <summary>
-    ///     This converter allow to blend two colors into one based on a specified ratio
-    /// </summary>
     public class ColorBlendConverter : IValueConverter
     {
         private double _blendedColorRatio = 0;
 
-        /// <summary>
-        ///     The ratio of the blended color. Must be between 0 and 1.
-        /// </summary>
         public double BlendedColorRatio
         {
             get { return _blendedColorRatio; }
@@ -44,9 +22,6 @@ namespace Wpf.BusyIndicatorEasy.Core.Converters
             }
         }
 
-        /// <summary>
-        ///     The color to blend with the source color
-        /// </summary>
         public Color BlendedColor { get; set; }
 
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

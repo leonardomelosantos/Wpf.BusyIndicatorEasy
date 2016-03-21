@@ -1,37 +1,13 @@
-﻿/*************************************************************************************
-
-   Extended WPF Toolkit
-
-   Copyright (C) 2007-2013 Xceed Software Inc.
-
-   This program is provided to you under the terms of the Microsoft Public
-   License (Ms-PL) as published at http://wpftoolkit.codeplex.com/license 
-
-   For more features, controls, and fast professional support,
-   pick up the Plus Edition at http://xceed.com/wpf_toolkit
-
-   Stay informed: follow @datagrid on Twitter or Like http://facebook.com/datagrids
-
-  ***********************************************************************************/
-
-using System;
+﻿using System;
 using System.Windows.Media;
 
 namespace Wpf.BusyIndicatorEasy.Core.Media
 {
-    /// <summary>
-    ///     Contains system colors and configurations that can be used by the control themes.
-    ///     Mainly extracted from the registry because theses values are not exposed by the standard .NET API.
-    /// </summary>
     public static class WindowColors
     {
         private static Color? _colorizationMode;
         private static bool? _colorizationOpaqueBlend;
 
-        /// <summary>
-        ///     Relative to the \HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM\ColorizationColor Registry key.
-        ///     Gets the window chrome color.
-        /// </summary>
         public static Color ColorizationColor
         {
             get
@@ -45,8 +21,6 @@ namespace Wpf.BusyIndicatorEasy.Core.Media
                 }
                 catch
                 {
-                    // If for any reason (for example, a SecurityException for XBAP apps)
-                    // we cannot read the value in the registry, fall back on some color.
                     _colorizationMode = Color.FromArgb(255, 175, 175, 175);
                 }
 
@@ -54,11 +28,6 @@ namespace Wpf.BusyIndicatorEasy.Core.Media
             }
         }
 
-        /// <summary>
-        ///     Relative to the \HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM\ColorizationOpaqueBlend Registry key:
-        ///     Gets whether transparency is disabled.
-        ///     Returns true if transparency is disabled; false otherwise.
-        /// </summary>
         public static bool ColorizationOpaqueBlend
         {
             get
