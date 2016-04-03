@@ -9,9 +9,9 @@
     <Style TargetType="{x:Type local:BusyIndicator}">
         <Setter Property="BusyContent" Value="{Binding Title, Mode=TwoWay}" />
         <Setter Property="MinValue" Value="{Binding MinValue, Mode=TwoWay}" />
-        <Setter Property="MaxValue" Value="{Binding Title, Mode=TwoWay}" />
-        <Setter Property="CurrentProgressValue" Value="{Binding Title, Mode=TwoWay}" />
-        <Setter Property="IsIndeterminate" Value="{Binding Title, Mode=TwoWay}" />
+        <Setter Property="MaxValue" Value="{Binding MaxValue, Mode=TwoWay}" />
+        <Setter Property="CurrentProgressValue" Value="{Binding CurrentProgressValue, Mode=TwoWay}" />
+        <Setter Property="IsIndeterminate" Value="{Binding IsIndeterminate, Mode=TwoWay}" />
         <Setter Property="IsTabStop" Value="False" />
         <Setter Property="Focusable" Value="False" />
         <Setter Property="OverlayStyle">

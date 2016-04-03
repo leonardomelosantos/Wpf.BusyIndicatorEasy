@@ -400,37 +400,6 @@ namespace Wpf.BusyIndicatorEasy
         /// <param name="useTransitions">True if state transitions should be used.</param>
         protected virtual void ChangeVisualState(bool useTransitions)
         {
-            Setter setterMin =new Setter(ProgressBar.MinimumProperty, MinValue);/*
-            Setter setterMax =new Setter(ProgressBar.MaximumProperty, MaxValue);
-            Setter setterValue =new Setter(ProgressBar.ValueProperty, CurrentProgressValue);
-            Setter setterIsIndeterminate =new Setter(ProgressBar.IsIndeterminateProperty, IsIndeterminate);
-            
-            int indexSetterMin = ProgressBarStyle.Setters.IndexOf(setterMin);
-            int indexSetterMax = ProgressBarStyle.Setters.IndexOf(setterMax);
-            int indexSetterValue = ProgressBarStyle.Setters.IndexOf(setterValue);
-            int indexSetterIsIndeterminate = ProgressBarStyle.Setters.IndexOf(setterIsIndeterminate);
-
-            if (indexSetterMin >= 0) { ProgressBarStyle.Setters[indexSetterMin] = setterMin; }
-            else { ProgressBarStyle.Setters.Add(setterMin); }
-            
-            if (indexSetterMax >= 0) {ProgressBarStyle.Setters[indexSetterMax] = setterMax;}
-            else { ProgressBarStyle.Setters.Add(setterMax); }
-
-            if (indexSetterValue >= 0) { ProgressBarStyle.Setters[indexSetterValue] = setterValue; }
-            else { ProgressBarStyle.Setters.Add(setterValue); }
-
-            if (indexSetterIsIndeterminate >= 0) { ProgressBarStyle.Setters[indexSetterIsIndeterminate] = setterIsIndeterminate; }
-            else { ProgressBarStyle.Setters.Add(setterIsIndeterminate); }*/
-
-            /*this.DataContext = new Teste()
-            {
-                MinValue = this.MinValue,
-                MaxValue = this.MaxValue,
-                CurrentValue = this.CurrentProgressValue,
-                IsIndeterminate = this.IsIndeterminate,
-                Title = this.Title
-            };*/
-
             VisualStateManager.GoToState(this, IsBusy ? VisualStates.StateBusy : VisualStates.StateIdle, useTransitions);
             VisualStateManager.GoToState(this, IsContentVisible ? VisualStates.StateVisible : VisualStates.StateHidden,
                 useTransitions);
